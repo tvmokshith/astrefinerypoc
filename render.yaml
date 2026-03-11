@@ -11,3 +11,20 @@ services:
         value: 10000
       - key: NODE_ENV
         value: production
+
+  - type: web
+    name: astrikos-frontend
+    env: node
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      # After deploying the backend, set this to your backend service URL:
+      # e.g. https://astrikos-backend.onrender.com
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
