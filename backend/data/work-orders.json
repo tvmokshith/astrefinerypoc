@@ -1,0 +1,62 @@
+[
+  {
+    "WorkOrderID": "WO-1773141547633-17256D",
+    "Subsystem": "Equipment Health",
+    "Equipment": "Transfer Pump P-501",
+    "Description": "Machine panel request for Transfer Pump P-501 (Pump) in Utilities Unit.\n\nObservations:\n- Failure probability: 25.6%\n- Vibration: 5.49 mm/s\n- Temp: 69.7 °C\n- Pressure: 3.84 bar\n\nSuggested action: Inspect bearings / alignment; verify lubrication; schedule condition monitoring review.",
+    "Priority": "High",
+    "Status": "Approved",
+    "AssignedTeam": "Maintenance",
+    "CreatedBy": "operator",
+    "CreatedDate": "2026-03-10T11:19:07.628Z",
+    "ApprovalStatus": "Approved",
+    "Source": "digital-twin-machine",
+    "LinkedKPI": null,
+    "LinkedAlertID": null
+  },
+  {
+    "WorkOrderID": "WO-1773141541959-5130DE",
+    "Subsystem": "Equipment Health",
+    "Equipment": "Transfer Pump P-501",
+    "Description": "Machine panel request for Transfer Pump P-501 (Pump) in Hydrogen Plant.\n\nObservations:\n- Failure probability: 25.6%\n- Vibration: 5.49 mm/s\n- Temp: 69.7 °C\n- Pressure: 3.84 bar\n\nSuggested action: Inspect bearings / alignment; verify lubrication; schedule condition monitoring review.",
+    "Priority": "High",
+    "Status": "Approved",
+    "AssignedTeam": "Maintenance",
+    "CreatedBy": "operator",
+    "CreatedDate": "2026-03-10T11:19:01.956Z",
+    "ApprovalStatus": "Approved",
+    "Source": "digital-twin-machine",
+    "LinkedKPI": null,
+    "LinkedAlertID": null
+  },
+  {
+    "WorkOrderID": "WO-1773141532755-CE79BD",
+    "Subsystem": "Equipment Health",
+    "Equipment": "Steam Reformer R-501",
+    "Description": "Machine panel request for Steam Reformer R-501 (Reactor) in Hydrogen Plant.\n\nObservations:\n- Failure probability: 35.0%\n- Vibration: 3.50 mm/s\n- Temp: 817.4 °C\n- Pressure: 2.49 bar\n\nSuggested action: Inspect bearings / alignment; verify lubrication; schedule condition monitoring review.",
+    "Priority": "Critical",
+    "Status": "Pending Approval",
+    "AssignedTeam": "Maintenance",
+    "CreatedBy": "operator",
+    "CreatedDate": "2026-03-10T11:18:52.724Z",
+    "ApprovalStatus": "Pending",
+    "Source": "digital-twin-machine",
+    "LinkedKPI": null,
+    "LinkedAlertID": null
+  },
+  {
+    "WorkOrderID": "WO-1773125417201-7EC29D",
+    "Subsystem": "Equipment Health",
+    "Equipment": "Pump P-203",
+    "Description": "Test WO",
+    "Priority": "High",
+    "Status": "Pending Approval",
+    "AssignedTeam": "Maintenance",
+    "CreatedBy": "tester",
+    "CreatedDate": "2026-03-10T06:50:17.201Z",
+    "ApprovalStatus": "Pending",
+    "Source": "manual",
+    "LinkedKPI": null,
+    "LinkedAlertID": null
+  }
+]

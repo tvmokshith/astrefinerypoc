@@ -1,0 +1,11 @@
+[build]
+  base    = "frontend"
+  command = "npm install && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The Next.js runtime plugin handles SSR, image optimisation, etc.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
