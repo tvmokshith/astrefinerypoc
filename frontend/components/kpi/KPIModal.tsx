@@ -190,7 +190,7 @@ export default function KPIModal({ title, definition, formula, operationalExplan
                                     <Tooltip
                                         contentStyle={{ backgroundColor:'#0f172a', borderRadius:'8px', border:'1px solid #1e293b' }}
                                         itemStyle={{ fontSize:'13px', fontWeight:600, color:'#f8fafc' }}
-                                        formatter={(v: number | string | undefined) => { const n = typeof v === 'number' ? v : Number(v ?? 0); return [n.toLocaleString(undefined,{maximumFractionDigits:2}), 'Value']; }}
+                                        formatter={(v) => { const n = Array.isArray(v) ? Number(v[0]) : typeof v === 'number' ? v : Number(v ?? 0); return [n.toLocaleString(undefined,{maximumFractionDigits:2}), 'Value'] as [string, string]; }}
                                     />
                                     <Area type="monotone" dataKey="value" stroke={statusColor} strokeWidth={3} fillOpacity={1} fill="url(#colorModalKpi)" isAnimationActive={false} />
                                     {showPrediction && (
