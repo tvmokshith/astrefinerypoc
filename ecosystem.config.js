@@ -1,36 +1,35 @@
 // PM2 process file for the Astrikos Refinery POC.
 // Starts BOTH processes with one command:  pm2 start ecosystem.config.js
 //
-//   refinery_frontend_3202 -> Next.js SSR server (next start)  on :3202  (orange in CF)
-//   refinery_backend_3008  -> Express REST API (src/server.js) on :3008  (gray  in CF)
+//   refinery_3307    -> Next.js SSR server (next start) on :3307  (orange in CF)
+//   refinery_be_4307 -> Express REST API (src/server.js) on :4307 (gray  in CF)
 //
 // Ports/subdomains are documented in DEPLOY.md. If you change the frontend port,
-// update the nginx block; if you change the backend port, update BACKEND_INTERNAL_URL
-// below AND frontend/.env.production (then rebuild the frontend).
+// update the nginx block; if you change the backend port, update frontend/
+// .env.production (BACKEND_INTERNAL_URL + NEXT_PUBLIC_API_URL) and rebuild.
 
 const path = require('path');
 
 module.exports = {
   apps: [
     {
-      name: 'refinery_frontend_3202',
+      name: 'refinery_3307',
       cwd: path.join(__dirname, 'frontend'),
       // Run the Next.js production server directly (needs `npm run build` first).
       script: path.join(__dirname, 'frontend', 'node_modules', 'next', 'dist', 'bin', 'next'),
-      args: 'start -p 3202',
+      args: 'start -p 3307',
       env: {
         NODE_ENV: 'production',
-        // Same-host internal URL for server-component fetches (skips TLS + Cloudflare).
-        BACKEND_INTERNAL_URL: 'http://127.0.0.1:3008',
       },
     },
     {
-      name: 'refinery_backend_3008',
+      name: 'refinery_be_4307',
       cwd: path.join(__dirname, 'backend'),
       script: path.join(__dirname, 'backend', 'src', 'server.js'),
       env: {
         NODE_ENV: 'production',
-        PORT: 3008,
+        PORT: 4307,
+        HOST: '127.0.0.1',
       },
     },
   ],
