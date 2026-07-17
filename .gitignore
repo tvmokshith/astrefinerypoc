@@ -10,7 +10,8 @@ frontend/out/
 # Environment variables
 frontend/.env
 frontend/.env.local
-frontend/.env.production
+# frontend/.env.production is committed on purpose — it holds only the public API
+# URL that gets baked into the build (no secrets). See DEPLOY.md.
 backend/.env
 backend/.env.local
 

@@ -1,0 +1,16 @@
+{
+  "name": "refinery-poc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Astrikos Digital Refinery Intelligence POC — Next.js dashboard + Express API",
+  "scripts": {
+    "install:all": "npm --prefix frontend install && npm --prefix backend install",
+    "build": "npm --prefix frontend run build",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "pm2:start": "pm2 start ecosystem.config.js && pm2 save",
+    "pm2:restart": "pm2 restart ecosystem.config.js",
+    "pm2:stop": "pm2 stop ecosystem.config.js",
+    "deploy": "npm run install:all && npm run build && npm run pm2:start"
+  }
+}
